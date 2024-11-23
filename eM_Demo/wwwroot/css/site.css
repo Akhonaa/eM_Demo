@@ -1,0 +1,80 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(34, 96, 140, 100);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*.login-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("/myAssets/ventilation_bg.jpg") no-repeat center; object-fit:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container .form-body {
+        color: white;
+        background-color: rgba(27, 27, 50, 0.8);
+        margin: 20px auto;
+        padding: 30px 30px;
+        max-width: 450px;
+        border-radius: 5px;
+        box-shadow: 2px 5px 10px rgba(0,0,0);
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5),; 
+    z-index: -1;
+}
+
+
+
+.register-container{
+    margin-top: 20px;
+}*/
