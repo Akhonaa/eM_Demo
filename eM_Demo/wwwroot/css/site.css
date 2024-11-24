@@ -30,18 +30,59 @@ body {
   text-align: start;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
     position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgb(34, 96, 140, 100);
-    padding: 10px;
-    margin-bottom: 10px;
+    background-color: #f8f9fa; /* Matches Bootstrap's light background */
+    transition: width 0.3s ease; /* Smooth transition for collapsing */
 }
+
+    .sidebar.collapsed {
+        width: 60px;
+    }
+
+    /* Sidebar Header */
+    .sidebar .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .sidebar.collapsed .sidebar-header .navbar-brand {
+        display: none; /* Hide the brand name when collapsed */
+    }
+
+    /* Sidebar Navigation */
+    .sidebar ul.nav {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .sidebar ul.nav li.nav-item {
+            padding: 10px;
+        }
+
+/* Main Content Adjustment */
+.main-content {
+    margin-left: 250px; /* Matches default sidebar width */
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 60px; /* Adjust content position when sidebar is collapsed */
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    margin-top: auto; /* Push footer to the bottom */
+    padding: 10px;
+}
+
+
+
 
 /*.login-container {
     position: relative;

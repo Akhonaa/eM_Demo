@@ -1,33 +1,36 @@
-﻿<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Extraction Master</a>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/Dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Employee">Employees</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Jobs">Jobs</a>
-            </li>
-        </ul>
-        <div class="navbar-nav ml-auto">
-            <!-- Account Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Account
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
-                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="Login">Login</a></li>
-                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="Register">Register</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/Account/ForgotPassword">Forgot Password</a></li>
-                </ul>
-            </li>
+﻿<nav class="sidebar bg-light" id="sidebar">
+    <div class="sidebar-header d-flex align-items-center justify-content-between">
+        <a class="navbar-brand" href="/">Extraction Master</a>
+        <button id="sidebarToggle" class="btn btn-sm btn-outline-secondary">
+            ☰
+        </button>
+    </div>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="/Dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Employee">Employee Directory</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Projects">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Jobs">Jobs</a>
+        </li>
+    </ul>
+    <div class="sidebar-footer mt-auto">
+        <!-- Account Dropdown -->
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="accountDropdown">
+                <li><a class="dropdown-item" asp-controller="Admin" asp-action="Login">Login</a></li>
+                <li><a class="dropdown-item" asp-controller="Admin" asp-action="Register">Register</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/Account/ForgotPassword">Forgot Password</a></li>
+            </ul>
         </div>
     </div>
 </nav>
